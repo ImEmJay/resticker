@@ -7,17 +7,17 @@ tags:
 {{/if}}
 manifests:
   -
-    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}amd64
+    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}latest-{{/if}}amd64
     platform:
       architecture: amd64
       os: linux
   -
-    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}arm
+    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}latest-{{/if}}arm
     platform:
       architecture: arm
       os: linux
   -
-    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}-{{/if}}arm64
+    image: imemjay/resticker:{{#if build.tag}}{{trimPrefix "v" build.tag}}{{else}}latest-{{/if}}arm64
     platform:
       architecture: arm64
       os: linux

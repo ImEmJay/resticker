@@ -9,8 +9,7 @@ steps:
   - name: build
     image: plugins/docker
     settings:
-      auto_tag: true
-      auto_tag_suffix: amd64
+      tags: latest-amd64
       build_args_from_env:
         - DRONE_STAGE_ARCH
       repo: imemjay/resticker
@@ -35,8 +34,7 @@ steps:
   - name: build
     image: plugins/docker:linux-arm
     settings:
-      auto_tag: true
-      auto_tag_suffix: arm
+      tags: latest-arm
       build_args_from_env:
         - DRONE_STAGE_ARCH
       repo: imemjay/resticker
@@ -61,8 +59,7 @@ steps:
   - name: build
     image: plugins/docker:linux-arm64
     settings:
-      auto_tag: true
-      auto_tag_suffix: arm64
+      tags: latest-arm64
       build_args_from_env:
         - DRONE_STAGE_ARCH
       repo: imemjay/resticker
@@ -83,7 +80,7 @@ steps:
     image: plugins/manifest:1
     settings:
       spec: manifest.tmpl
-      auto_tag: true
+      use_default_tag: true
       username:
         from_secret: docker_username
       password:
