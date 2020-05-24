@@ -1,9 +1,11 @@
 # Resticker
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/mazzolino/restic.svg)](https://hub.docker.com/r/mazzolino/restic/)
-[![Build status](https://ci.strahlungsfrei.de/api/badges/djmaze/resticker/status.svg)](https://ci.strahlungsfrei.de/djmaze/resticker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/imemjay/resticker.svg)](https://hub.docker.com/r/imemjay/resticker/)
+[![Build Status](https://cloud.drone.io/api/badges/ImEmJay/resticker/status.svg?ref=refs/heads/imemjay)](https://cloud.drone.io/ImEmJay/resticker/)
 
 Run automatic [restic](https://restic.github.io/) backups via a Docker container.
+
+## Personal fork from [djmaze/resticker](https://github.com/djmaze/resticker) that may change. Try to use parent image [mazzolino/restic](https://hub.docker.com/r/mazzolino/restic) first!
 
 ## Features
 
@@ -13,7 +15,7 @@ Run automatic [restic](https://restic.github.io/) backups via a Docker container
 * automatic forgetting of old backups
 * prune backups on a schedule
 * can be used as a (global) Docker swarm service in order to backup every cluster node
-* multi-arch: the image `mazzolino/restic` runs on `amd64` as well as `armv7` (for now)
+* multi-arch: the image `imemjay/resticker` runs on `amd64` as well as `armv7` and `arm64` (for now)
 
 ## Usage
 
